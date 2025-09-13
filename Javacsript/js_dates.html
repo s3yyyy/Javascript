@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript new Date() Examples</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    section { margin-bottom: 40px; }
+    h1, h2 { color: #2c3e50; }
+    p.demo-output { font-weight: bold; color: #34495e; }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Dates</h1>
+
+  <section>
+    <h2>Current Date and Time</h2>
+    <p>Create a new date object with the current date and time:</p>
+    <p id="demo-current" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Specified Date and Time with 7 numbers</h2>
+    <p>Using new Date(7 numbers), creates a new date object with the specified date and time:</p>
+    <p id="demo-seven-numbers" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Specified Date and Time with 5 numbers</h2>
+    <p>5 numbers specify year, month, day, hour, and minute:</p>
+    <p id="demo-five-numbers" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Specified Date with 3 numbers</h2>
+    <p>3 numbers specify year, month, and day:</p>
+    <p id="demo-three-numbers" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>One parameter interpreted as milliseconds</h2>
+    <p>One parameter will be interpreted as new Date(milliseconds).</p>
+    <p id="demo-milliseconds" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Specified Date and Time with string</h2>
+    <p>A date object can be created with a specified date and time string:</p>
+    <p id="demo-string" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>JavaScript counts months from 0 to 11</h2>
+    <p>JavaScript counts months from 0 to 11. Example with April (3):</p>
+    <p id="demo-months-count" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Overflowing Day Value</h2>
+    <p>Specifying a day higher than max will not cause an error but add the overflow to the next month:</p>
+    <p id="demo-day-overflow" class="demo-output"></p>
+  </section>
+
+<script>
+  const currentDate = new Date();
+  document.getElementById("demo-current").innerHTML = currentDate;
+
+  const dateSevenNumbers = new Date(2018, 11, 24, 10, 33, 30, 0);
+  document.getElementById("demo-seven-numbers").innerHTML = dateSevenNumbers;
+
+  const dateFiveNumbers = new Date(2018, 11, 24, 10, 33);
+  document.getElementById("demo-five-numbers").innerHTML = dateFiveNumbers;
+
+  const dateThreeNumbers = new Date(2018, 11, 24);
+  document.getElementById("demo-three-numbers").innerHTML = dateThreeNumbers;
+
+  const dateMilliseconds = new Date(2018);
+  document.getElementById("demo-milliseconds").innerHTML = dateMilliseconds;
+
+  const dateString = new Date("October 13, 2014 11:13:00");
+  document.getElementById("demo-string").innerHTML = dateString;
+
+  const dateMonthsCount = new Date(2019, 3, 24, 10, 33, 30, 0);
+  document.getElementById("demo-months-count").innerHTML = dateMonthsCount;
+
+  const dateDayOverflow = new Date(2018, 5, 35, 10, 33, 30, 0);
+  document.getElementById("demo-day-overflow").innerHTML = dateDayOverflow;
+</script>
+
+</body>
+</html>

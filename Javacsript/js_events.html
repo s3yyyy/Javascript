@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript HTML Events</h1>
+<h2>The onclick Attribute</h2>
+
+<!-- Example 1: onclick changes paragraph content -->
+<button onclick="document.getElementById('demo1').innerHTML = Date()">
+  The time is?
+</button>
+<p id="demo1"></p>
+
+<!-- Example 2: onclick changes the button's own text -->
+<button onclick="this.innerHTML = Date()">
+  The time is?
+</button>
+
+<!-- Example 3: onclick calls a separate function -->
+<p>Click the button to display the date.</p>
+<button onclick="displayDate()">
+  The time is?
+</button>
+<p id="demo2"></p>
+
+<script>
+function displayDate() {
+  document.getElementById("demo2").innerHTML = Date();
+}
+</script>
+
+</body>
+</html>

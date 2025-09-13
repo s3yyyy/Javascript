@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings Examples</h1>
+
+<h2>Basic Strings</h2>
+<p id="demo1"></p>
+
+<h2>Single and Double Quotes</h2>
+<p id="demo2"></p>
+
+<h2>Quotes Inside Strings</h2>
+<p id="demo3"></p>
+
+<h2>Template Strings (Backticks)</h2>
+<p id="demo4"></p>
+
+<h2>String vs String Object Types</h2>
+<p id="demo5"></p>
+
+<h2>Comparison of String and String Object</h2>
+<p id="demo6"></p>
+
+<h2>Comparison of Two String Objects</h2>
+<p id="demo7"></p>
+
+<h2>String Length</h2>
+<p id="demo8"></p>
+
+<h2>Escape Sequence for Backslash</h2>
+<p id="demo9"></p>
+
+<h2>Multiline Template Strings</h2>
+<p id="demo10"></p>
+
+<script>
+// Basic string
+let text = "John Doe";
+document.getElementById("demo1").innerHTML = text;
+
+// Single and double quotes
+let carName1 = "Volvo XC60";
+let carName2 = 'Volvo XC60';
+document.getElementById("demo2").innerHTML = carName1 + " " + carName2;
+
+// Quotes inside strings
+let answer1 = "It's alright";
+let answer2 = "He is called 'Johnny'";
+let answer3 = 'He is called "Johnny"';
+document.getElementById("demo3").innerHTML = answer1 + "<br>" + answer2 + "<br>" + answer3;
+
+// Template strings with backticks
+let backtickText = `He's often called "Johnny"`;
+document.getElementById("demo4").innerHTML = backtickText;
+
+// String vs String object types
+let x = "John";          // string primitive
+let y = new String("John");  // String object
+document.getElementById("demo5").innerHTML = typeof x + "<br>" + typeof y;
+
+// Comparison of string and String object
+document.getElementById("demo6").innerHTML = (x == y);  // true because of type coercion
+
+// Comparison of two String objects (strict equality)
+let a = new String("John");
+let b = new String("John");
+document.getElementById("demo7").innerHTML = (a === b); // false because different objects
+
+// String length property
+let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo8").innerHTML = alphabet.length;
+
+// Escape sequence for backslash
+let backslashText = "The character \\ is called backslash.";
+document.getElementById("demo9").innerHTML = backslashText;
+
+// Multiline strings using template literals
+let multiline = `The quick
+brown fox
+jumps over
+the lazy dog`;
+document.getElementById("demo10").innerHTML = multiline;
+</script>
+
+</body>
+</html>

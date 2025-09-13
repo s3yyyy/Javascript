@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Objects Examples</h1>
+
+<h2>Creating Objects</h2>
+<p id="obj1"></p>
+<p id="obj2"></p>
+<p id="obj3"></p>
+<p id="obj4"></p>
+<p id="obj5"></p>
+
+<h2>Accessing Properties</h2>
+<p id="prop1"></p>
+<p id="prop2"></p>
+
+<h2>Object Methods</h2>
+<p id="method"></p>
+
+<h2>Displaying Objects</h2>
+<p id="displayObj"></p>
+<p id="displayProps"></p>
+
+<h2>Object Constructors</h2>
+<p id="constructor1"></p>
+<p id="constructor2"></p>
+
+<script>
+// Creating Objects
+
+// Object literal
+const car = {type:"Fiat", model:"500", color:"white"};
+document.getElementById("obj1").textContent = "Car type is " + car.type;
+
+// Object literal with multiple properties
+const person1 = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+document.getElementById("obj2").textContent = person1.firstName + " is " + person1.age + " years old.";
+
+// Same object, multiline
+const person2 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+document.getElementById("obj3").textContent = person2.firstName + " is " + person2.age + " years old.";
+
+// Empty object and add properties later
+const person3 = {};
+person3.firstName = "John";
+person3.lastName = "Doe";
+person3.age = 50;
+person3.eyeColor = "blue";
+document.getElementById("obj4").textContent = person3.firstName + " is " + person3.age + " years old.";
+
+// Using new keyword
+const person4 = new Object({
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+});
+document.getElementById("obj5").textContent = person4.firstName + " is " + person4.age + " years old.";
+
+// Accessing Properties
+
+const person5 = {
+  firstname: "John",
+  lastname: "Doe",
+  age: 50,
+  eyecolor: "blue"
+};
+
+document.getElementById("prop1").textContent = person5.firstname + " is " + person5.age + " years old.";
+document.getElementById("prop2").textContent = person5["firstname"] + " is " + person5["age"] + " years old.";
+
+// Object Methods
+
+const person6 = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+document.getElementById("method").textContent = person6.fullName();
+
+// Displaying Objects
+
+const person7 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Displaying object directly gives [object Object]
+document.getElementById("displayObj").textContent = person7;
+
+// Displaying individual properties
+document.getElementById("displayProps").textContent = person7.name + ", " + person7.age + ", " + person7.city;
+
+// Object Constructors
+
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+const myFather = new Person("John", "Doe", 50, "blue");
+document.getElementById("constructor1").textContent = "My father is " + myFather.age + ".";
+
+const myMother = new Person("Sally", "Rally", 48, "green");
+document.getElementById("constructor2").textContent = "My father is " + myFather.age + ". My mother is " + myMother.age + ".";
+</script>
+
+</body>
+</html>

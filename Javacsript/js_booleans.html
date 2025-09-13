@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Boolean Examples</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    section { margin-bottom: 40px; }
+    h1, h2 { color: #2c3e50; }
+    p.demo-output { font-weight: bold; color: #34495e; }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Boolean Examples</h1>
+
+  <section>
+    <h2>Use Case: Equality</h2>
+    <p id="demo-equality" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Use Case: if .. else</h2>
+    <p id="demo-ifelse" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Use Case: While Loop</h2>
+    <p id="demo-while" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Boolean(10 &gt; 9)</h2>
+    <p id="demo-bool10" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Boolean Values of Various Inputs</h2>
+    <p id="demo-bool-values" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Boolean Value of 0</h2>
+    <p id="demo-bool-zero" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Booleans and Boolean Objects Type Comparison</h2>
+    <p id="demo-type" class="demo-output"></p>
+  </section>
+
+<script>
+  let x = 5;
+  document.getElementById("demo-equality").innerHTML = (x == 8);
+
+  const hour = new Date().getHours();
+  let greeting;
+  if (hour < 18) {
+    greeting = "Good day!";
+  } else {
+    greeting = "Good evening!";
+  }
+  document.getElementById("demo-ifelse").innerHTML = greeting;
+
+  let text = "";
+  let i = 1;
+  while (i < 10) {
+    text += i;
+    i++;
+  }
+  document.getElementById("demo-while").innerHTML = text;
+
+  document.getElementById("demo-bool10").innerHTML = Boolean(10 > 9);
+
+  document.getElementById("demo-bool-values").innerHTML =
+    "100 is " + Boolean(100) + "<br>" +
+    "3.14 is " + Boolean(3.14) + "<br>" +
+    "-15 is " + Boolean(-15) + "<br>" +
+    '"Hello" is ' + Boolean("Hello") + "<br>" +
+    "'false' is " + Boolean('false') + "<br>" +
+    "(1 + 7 + 3.14) is " + Boolean(1 + 7 + 3.14);
+
+  let zeroVal = 0;
+  document.getElementById("demo-bool-zero").innerHTML = Boolean(zeroVal);
+
+  let boolPrimitive = false;
+  let boolObject = new Boolean(false);
+  document.getElementById("demo-type").innerHTML = typeof boolPrimitive + "<br>" + typeof boolObject;
+</script>
+
+</body>
+</html>

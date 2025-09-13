@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Arithmetic Operators</title>
+</head>
+<body>
+
+<h1>JavaScript Arithmetic Operators</h1>
+
+<section>
+  <h2>The Addition (+) Operator</h2>
+  <p>Adds two numbers together.</p>
+  <p id="add"></p>
+</section>
+
+<section>
+  <h2>The Subtraction (-) Operator</h2>
+  <p>Subtracts one number from another.</p>
+  <p id="subtract"></p>
+</section>
+
+<section>
+  <h2>The Multiplication (*) Operator</h2>
+  <p>Multiplies two numbers.</p>
+  <p id="multiply"></p>
+</section>
+
+<section>
+  <h2>The Division (/) Operator</h2>
+  <p>Divides one number by another.</p>
+  <p id="divide"></p>
+</section>
+
+<section>
+  <h2>The Modulus (%) Operator</h2>
+  <p>Returns the remainder of division.</p>
+  <p id="modulus"></p>
+</section>
+
+<section>
+  <h2>The Increment (++) Operator</h2>
+  <p>Increases a number by one.</p>
+  <p id="increment"></p>
+</section>
+
+<section>
+  <h2>The Decrement (--) Operator</h2>
+  <p>Decreases a number by one.</p>
+  <p id="decrement"></p>
+</section>
+
+<section>
+  <h2>Exponentiation using Math.pow()</h2>
+  <p>Raises a number to the power of another.</p>
+  <p id="power"></p>
+</section>
+
+<section>
+  <h2>Operator Precedence</h2>
+  <p>Multiplication is performed before addition unless parentheses override.</p>
+  <p id="precedence1"></p>
+  <p>Parentheses change the order of operations.</p>
+  <p id="precedence2"></p>
+</section>
+
+<script>
+  // Addition
+  let x = 5, y = 2;
+  document.getElementById('add').textContent = x + " + " + y + " = " + (x + y);
+
+  // Subtraction
+  document.getElementById('subtract').textContent = x + " - " + y + " = " + (x - y);
+
+  // Multiplication
+  document.getElementById('multiply').textContent = x + " * " + y + " = " + (x * y);
+
+  // Division
+  document.getElementById('divide').textContent = x + " / " + y + " = " + (x / y);
+
+  // Modulus
+  document.getElementById('modulus').textContent = x + " % " + y + " = " + (x % y);
+
+  // Increment
+  let inc = 5;
+  inc++;
+  document.getElementById('increment').textContent = "After incrementing 5, value is " + inc;
+
+  // Decrement
+  let dec = 5;
+  dec--;
+  document.getElementById('decrement').textContent = "After decrementing 5, value is " + dec;
+
+  // Power
+  let base = 5, exponent = 2;
+  document.getElementById('power').textContent = base + " to the power of " + exponent + " is " + Math.pow(base, exponent);
+
+  // Operator Precedence
+  let result1 = 100 + 50 * 3;
+  let result2 = (100 + 50) * 3;
+
+  document.getElementById('precedence1').textContent = "100 + 50 * 3 = " + result1;
+  document.getElementById('precedence2').textContent = "(100 + 50) * 3 = " + result2;
+</script>
+
+</body>
+</html>

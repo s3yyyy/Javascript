@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Math Examples</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    section { margin-bottom: 40px; }
+    h1, h2 { color: #2c3e50; }
+    p.demo-output { font-weight: bold; color: #34495e; }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Math Examples</h1>
+
+  <section>
+    <h2>Math.PI</h2>
+    <p>Math.PI returns the ratio of a circle's circumference to its diameter:</p>
+    <p id="demo-pi" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Constant Properties</h2>
+    <p id="demo-constants" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Math.floor()</h2>
+    <p>Math.floor(x) returns the value of x rounded <strong>down</strong> to its nearest integer:</p>
+    <p id="demo-floor" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Math.trunc()</h2>
+    <p>Math.trunc(x) returns the integer part of x:</p>
+    <p id="demo-trunc" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Math.round()</h2>
+    <p>Math.round(x) returns the value of x rounded to its nearest integer:</p>
+    <p id="demo-round" class="demo-output"></p>
+  </section>
+
+  <section>
+    <h2>Math.ceil()</h2>
+    <p>Math.ceil() rounds a number <strong>up</strong> to its nearest integer:</p>
+    <p id="demo-ceil" class="demo-output"></p>
+  </section>
+
+<script>
+  document.getElementById("demo-pi").innerHTML = Math.PI;
+
+  document.getElementById("demo-constants").innerHTML = 
+    "<p><b>Math.E:</b> " + Math.E + "</p>" +
+    "<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+    "<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+    "<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+    "<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+    "<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+    "<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+    "<p><b>Math.LOG10E:</b> " + Math.LOG10E + "</p>";
+
+  document.getElementById("demo-floor").innerHTML = Math.floor(4.7);
+
+  document.getElementById("demo-trunc").innerHTML = Math.trunc(4.7);
+
+  document.getElementById("demo-round").innerHTML = Math.round(4.4);
+
+  document.getElementById("demo-ceil").innerHTML = Math.ceil(4.4);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Numbers</h1>
+<h3>Number can be written with or without decimals.</h3>
+<p id="demo1"></p>
+
+<h1>JavaScript Strings</h1>
+<h3>Strings can be written with double or single quotes.</h3>
+<p id="demo2"></p>
+
+<h1>JavaScript Variables</h1>
+<p>In this example, x is defined as a variable. Then, x is assigned the value of 6:</p>
+<p id="demo3"></p>
+
+<h1>JavaScript Syntax</h1>
+<h3>The let and const keywords create variables</h3>
+<p id="demo4"></p>
+
+<h1>JavaScript Operators</h1>
+<h2>The Assignment (=) Operator</h2>
+<p>The = operator is used to assign values to variables.</p>
+<p id="demo5"></p>
+
+<h1>JavaScript Operators</h1>
+<p>JavaScript uses arithmetic operators to compute values (just like algebra).</p>
+<p id="demo6"></p>
+
+<script>
+document.getElementById("demo1").innerHTML = 10.50;
+document.getElementById("demo2").innerHTML = 'John Doe';
+
+let x;
+x = 6;
+document.getElementById("demo3").innerHTML = "The value of x is " + x;
+
+let a = 5;
+const fname = "John";
+document.getElementById("demo4").innerHTML = fname + " is " + a + " years old.";
+
+let y = 6;
+let sum = a + y;
+document.getElementById("demo5").innerHTML = "The sum is " + sum;
+
+document.getElementById("demo6").innerHTML = 5 * 10;
+</script>
+
+</body>
+</html>

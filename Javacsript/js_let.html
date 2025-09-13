@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Redeclaring a Variable Using var</h2>
+<p id="demo_var_redeclare"></p>
+
+<h2>Redeclaring a Variable Using let</h2>
+<p id="demo_let_redeclare"></p>
+
+<h2>JavaScript let Redeclare with var</h2>
+<p id="demo_var_redeclare2"></p>
+
+<h2>JavaScript let Redeclare in Blocks</h2>
+<p id="demo_let_blocks"></p>
+
+<h2>JavaScript Hoisting with var</h2>
+<p id="demo_hoisting_var"></p>
+
+<h2>JavaScript Hoisting with let</h2>
+<p id="demo_hoisting_let"></p>
+
+<script>
+var x = 10;
+{
+  var x = 2;
+}
+document.getElementById("demo_var_redeclare").innerHTML = x;
+
+let y = 10;
+{
+  let y = 2;
+}
+document.getElementById("demo_let_redeclare").innerHTML = y;
+
+var a = 2;
+var a = 3;
+document.getElementById("demo_var_redeclare2").innerHTML = a;
+
+let b = 2;
+{
+  let b = 3;
+}
+{
+  let b = 4;
+}
+document.getElementById("demo_let_blocks").innerHTML = b;
+
+carName = "Volvo";
+document.getElementById("demo_hoisting_var").innerHTML = carName;
+var carName;
+
+try {
+  carNameLet = "Saab";
+  let carNameLet = "Volvo";
+} catch(err) {
+  document.getElementById("demo_hoisting_let").innerHTML = err;
+}
+</script>
+
+</body>
+</html>

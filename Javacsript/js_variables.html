@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Variables</h1>
+<p>The underscore is treated as a letter in JavaScript names.</p>
+<p id="demo_underscore"></p>
+
+<h1>JavaScript Variables</h1>
+<p>In this example, x, y, and z are variables.</p>
+<p id="demo1"></p>
+
+<h1>JavaScript Variables</h1>
+<p>In this example, x, y, and z are variables.</p>
+<p id="demo2"></p>
+
+<h1>JavaScript Variables</h1>
+<p>In this example, x, y, and z are variables.</p>
+<p id="demo3"></p>
+
+<h1>JavaScript Variables</h1>
+<p>Strings are written with quotes.</p>
+<p>Numbers are written without quotes.</p>
+<p id="demo4"></p>
+
+<h1>JavaScript Variables</h1>
+<p>The dollar sign is treated as a letter in JavaScript names.</p>
+<p id="demo_dollar"></p>
+
+<h1>JavaScript Variables</h1>
+<p>The result of adding 2 + 3 + "5" is:</p>
+<p id="demo_concat"></p>
+
+<script>
+let _x = 2;
+let _100 = 5;
+document.getElementById("demo_underscore").innerHTML = _x + _100;
+
+let x = 5;
+let y = 6;
+let z = x + y;
+document.getElementById("demo1").innerHTML = "The value of z is " + z;
+
+const a = 5;
+const b = 6;
+const c = a + b;
+document.getElementById("demo2").innerHTML = "The value of z is " + c;
+
+var p = 5;
+var q = 6;
+var r = p + q;
+document.getElementById("demo3").innerHTML = "The value of z is " + r;
+
+const pi = 3.14;
+let person = "John Doe";
+let answer = 'Yes I am!';
+document.getElementById("demo4").innerHTML = pi + "<br>" + person + "<br>" + answer;
+
+let $$$ = 2;
+let $myMoney = 5;
+document.getElementById("demo_dollar").innerHTML = $$$ + $myMoney;
+
+let concatResult = 2 + 3 + "5";
+document.getElementById("demo_concat").innerHTML = concatResult;
+</script>
+
+</body>
+</html>
