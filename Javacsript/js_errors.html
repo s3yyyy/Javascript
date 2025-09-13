@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Examples: continue & try...catch</title>
+</head>
+<body>
+
+  <h1>JavaScript Demonstrations</h1>
+
+  <h2>1. Continue in a For Loop</h2>
+  <p>Skips the iteration when <code>i === 3</code>:</p>
+  <p id="continueForLoop"></p>
+
+
+  <h2>2. Continue Labeled Outer Loop</h2>
+  <p>Skips the rest of the outer loop's iteration when inner <code>i === 3</code>:</p>
+  <p id="continueOuterLoop"></p>
+
+
+  <h2>3. try...catch Input Validation</h2>
+  <p>Please input a number between 5 and 10:</p>
+  <input id="userInput" type="text">
+  <button type="button" onclick="validateInput()">Test Input</button>
+  <p id="tryCatchResult"></p>
+
+  <script>
+p
+    let text1 = "";
+    for (let i = 1; i < 10; i++) {
+      if (i === 3) continue;
+      text1 += i * 10 + "<br>";
+    }
+    document.getElementById("continueForLoop").innerHTML = text1;
+
+
+    let text2 = "";
+    outerLoop: for (let j = 1; j < 5; j++) {
+      for (let i = 1; i < 5; i++) {
+        if (i === 3) continue outerLoop;
+        text2 += `j=${j}, i=${i}<br>`;
+      }
+    }
+    document.getElementById("continueOuterLoop").innerHTML = text2;
+
+
+    function validateInput() {
+      const result = document.getElementById("tryCatchResult");
+      result.innerHTML = "";
+      let x = document.getElementById("userInput").value;
+
+      try {
+        if (x.trim() === "") throw "empty";
+        if (isNaN(x)) throw "not a number";
+        x = Number(x);
+        if (x < 5) throw "too low";
+        if (x > 10) throw "too high";
+        result.innerHTML = "Input is valid: " + x;
+      } catch (err) {
+        result.innerHTML = "Input is " + err;
+      }
+    }
+  </script>
+
+</body>
+</html>
+

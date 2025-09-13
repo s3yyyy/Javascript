@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript `break` Statement Examples</title>
+</head>
+<body>
+
+  <h1>JavaScript `break` Statement Demonstrations</h1>
+
+
+  <h2>Break in a For Loop</h2>
+  <p>Break the loop when the counter is 3:</p>
+  <p id="breakForLoop"></p>
+
+
+  <h2>Break in a Switch Statement</h2>
+  <p id="breakSwitch"></p>
+
+
+  <h2>Break Outer Loop with Label</h2>
+  <p>Breaks both loops when `i === 3`:</p>
+  <p id="breakOuterLoop"></p>
+
+
+  <h2>Break Inner Loop with Label</h2>
+  <p>Only breaks inner loop when `i === 3`:</p>
+  <p id="breakInnerLoop"></p>
+
+ 
+  <h2>Break in a Labeled Code Block</h2>
+  <p id="breakBlock"></p>
+
+  <script>
+
+    let text1 = "";
+    for (let i = 0; i < 10; i++) {
+      if (i === 3) break;
+      text1 += "The number is " + i + "<br>";
+    }
+    document.getElementById("breakForLoop").innerHTML = text1;
+
+
+    let day;
+    switch (new Date().getDay()) {
+      case 0:
+        day = "Sunday"; break;
+      case 1:
+        day = "Monday"; break;
+      case 2:
+        day = "Tuesday"; break;
+      case 3:
+        day = "Wednesday"; break;
+      case 4:
+        day = "Thursday"; break;
+      case 5:
+        day = "Friday"; break;
+      case 6:
+        day = "Saturday";
+    }
+    document.getElementById("breakSwitch").innerHTML = "Today is " + day;
+
+    let text2 = "";
+    outerLoop: for (let j = 1; j < 5; j++) {
+      innerLoop: for (let i = 1; i < 5; i++) {
+        if (i === 3) break outerLoop;
+        text2 += i + "<br>";
+      }
+    }
+    document.getElementById("breakOuterLoop").innerHTML = text2;
+
+
+    let text3 = "";
+    loop1: for (let j = 1; j < 5; j++) {
+      loop2: for (let i = 1; i < 5; i++) {
+        if (i === 3) break loop2;
+        text3 += i + "<br>";
+      }
+    }
+    document.getElementById("breakInnerLoop").innerHTML = text3;
+
+
+    const cars = ["BMW", "Volvo", "Saab", "Ford"];
+    let text4 = "";
+    carList: {
+      text4 += cars[0] + "<br>";
+      text4 += cars[1] + "<br>";
+      break carList;
+      text4 += cars[2] + "<br>";
+      text4 += cars[3] + "<br>";
+    }
+    document.getElementById("breakBlock").innerHTML = text4;
+  </script>
+
+</body>
+</html>

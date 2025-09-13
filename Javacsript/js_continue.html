@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript `continue` Statement Examples</title>
+</head>
+<body>
+
+  <h1>JavaScript `continue` Statement Demonstrations</h1>
+
+  <h2>Continue in a For Loop</h2>
+  <p>Skips the iteration when <code>i === 3</code>:</p>
+  <p id="continueForLoop"></p>
+
+
+  <h2>Continue Labeled Outer Loop</h2>
+  <p>Skips the rest of the outer loop's iteration when inner <code>i === 3</code>:</p>
+  <p id="continueOuterLoop"></p>
+
+  <script>
+
+    let text1 = "";
+    for (let i = 1; i < 10; i++) {
+      if (i === 3) continue;
+      text1 += i * 10 + "<br>";
+    }
+    document.getElementById("continueForLoop").innerHTML = text1;
+
+
+    let text2 = "";
+    outerLoop: for (let j = 1; j < 5; j++) {
+      innerLoop: for (let i = 1; i < 5; i++) {
+        if (i === 3) continue outerLoop;
+        text2 += `j=${j}, i=${i}<br>`;
+      }
+    }
+    document.getElementById("continueOuterLoop").innerHTML = text2;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Basics: Functions, If/Else, Loops</title>
+</head>
+<body>
+
+  <h1>JavaScript Basics</h1>
+
+
+  <h2>1. Function: Compute Product</h2>
+  <p>Call a function to compute the product of p1 and p2:</p>
+  <p id="functionResult"></p>
+
+  <h2>2. If...Else Statement</h2>
+  <p>A time-based greeting:</p>
+  <p id="greetingResult"></p>
+
+
+  <h2>3. For Loop</h2>
+  <p id="forLoopResult"></p>
+
+
+  <h2>4. While Loop</h2>
+  <p id="whileLoopResult"></p>
+
+  <script>
+    function myFunction(p1, p2) {
+      return p1 * p2;
+    }
+    let result = myFunction(4, 3);
+    document.getElementById("functionResult").innerHTML = "The result is: " + result;
+
+    const hour = new Date().getHours(); 
+    let greeting;
+    if (hour < 18) {
+      greeting = "Good day";
+    } else {
+      greeting = "Good evening";
+    }
+    document.getElementById("greetingResult").innerHTML = greeting;
+
+ 
+    let forText = "";
+    for (let i = 0; i < 5; i++) {
+      forText += "The number is " + i + "<br>";
+    }
+    document.getElementById("forLoopResult").innerHTML = forText;
+
+    let whileText = "";
+    let i = 0;
+    while (i < 10) {
+      whileText += "The number is " + i + "<br>";
+      i++;
+    }
+    document.getElementById("whileLoopResult").innerHTML = whileText;
+  </script>
+
+</body>
+</html>

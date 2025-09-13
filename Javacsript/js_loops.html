@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Loops and Scope</title>
+</head>
+<body>
+
+  <h1>JavaScript Loop Examples</h1>
+
+  <h2>For Loop</h2>
+  <p id="forLoop"></p>
+ 
+  <h2>While Loop</h2>
+  <p id="whileLoop"></p>
+>
+  <h2>Do While Loop</h2>
+  <p id="doWhileLoop"></p>
+
+
+  <h2>Loop Scope (No Block Scope - `let i` reused)</h2>
+  <p id="scope1"></p>
+
+  <h2>Loop Scope (Block Scope - new `let i` inside loop)</h2>
+  <p id="scope2"></p>
+
+  <script>
+ 
+    const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+    let forText = "";
+    for (let i = 0; i < cars.length; i++) {
+      forText += cars[i] + "<br>";
+    }
+    document.getElementById("forLoop").innerHTML = forText;
+
+  
+    let whileText = "";
+    let i = 0;
+    while (i < 10) {
+      whileText += "The number is " + i + "<br>";
+      i++;
+    }
+    document.getElementById("whileLoop").innerHTML = whileText;
+
+    let doWhileText = "";
+    let j = 0;
+    do {
+      doWhileText += "The number is " + j + "<br>";
+      j++;
+    } while (j < 10);
+    document.getElementById("doWhileLoop").innerHTML = doWhileText;
+
+    let k = 5;
+    for (k = 0; k < 10; k++) {
+
+    }
+    document.getElementById("scope1").innerHTML = "Value of i after loop: " + k;
+
+    let m = 5;
+    for (let m = 0; m < 10; m++) {
+
+    }
+    document.getElementById("scope2").innerHTML = "Value of i after loop: " + m;
+  </script>
+
+</body>
+</html>
