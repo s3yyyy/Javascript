@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript if Statements</title>
+</head>
+<body>
+
+<h1>JavaScript if Statements</h1>
+
+<h2>Example 1: Greet based on morning or afternoon</h2>
+<p id="greeting1"></p>
+
+<h2>Example 2: Greet based on weekend or weekday</h2>
+<p id="greeting2"></p>
+
+<script>
+
+  let hour = new Date().getHours();
+
+  if (hour < 12) {
+    document.getElementById("greeting1").innerHTML = "Good Morning!";
+  } 
+  if (hour >= 12 && hour < 18) {
+    document.getElementById("greeting1").innerHTML = "Good Afternoon!";
+  }
+  if (hour >= 18) {
+    document.getElementById("greeting1").innerHTML = "Good Evening!";
+  }
+
+  let day = new Date().getDay();
+
+  if (day === 0 || day === 6) {
+    document.getElementById("greeting2").innerHTML = "Happy Weekend!";
+  } else {
+    document.getElementById("greeting2").innerHTML = "Have a productive weekday!";
+  }
+</script>
+
+</body>
+</html>
+

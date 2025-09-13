@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Logical and Nullish Operators</title>
+</head>
+<body>
+
+<h1>JavaScript Logical & Nullish Operators</h1>
+
+<h2>1. The && (AND) Operator</h2>
+<p>The && operator returns true if both expressions are true, otherwise false:</p>
+<p id="andDemo"></p>
+
+<h2>2. The || (OR) Operator</h2>
+<p>The || operator returns true if one or both expressions are true, otherwise false:</p>
+<p id="orDemo"></p>
+
+<h2>3. The ! (NOT) Operator</h2>
+<p id="notDemo1"></p>
+<p id="notDemo2"></p>
+
+<h2>4. The ?? (Nullish Coalescing) Operator</h2>
+<p>The ?? operator returns the first argument if it is not nullish (null or undefined). Otherwise, it returns the second.</p>
+<p id="nullishDemo"></p>
+
+<script>
+
+  let x1 = 6;
+  let y1 = 3;
+  document.getElementById("andDemo").innerHTML =
+    "(x1 < 10 && y1 > 1): " + (x1 < 10 && y1 > 1) + "<br>" +
+    "(x1 < 10 && y1 < 1): " + (x1 < 10 && y1 < 1);
+
+  let x2 = 6;
+  let y2 = -3;
+  let orResult = (x2 > 0 || y2 > 0);
+  document.getElementById("orDemo").innerHTML = "(x2 > 0 || y2 > 0): " + orResult;
+
+  document.getElementById("notDemo1").innerHTML = "(5 == 8): " + (5 == 8);
+  document.getElementById("notDemo2").innerHTML = "!(5 == 8): " + !(5 == 8);
+
+  let name = null;
+  let text = "missing";
+  let result = name ?? text;
+  document.getElementById("nullishDemo").innerHTML = "The name is: " + result;
+</script>
+
+</body>
+</html>
